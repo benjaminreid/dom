@@ -1,0 +1,9 @@
+{
+  "name": "@benjaminreid/dom",
+  "version": "1.0.0",
+  "description": "A set of handy DOM functions",
+  "main": "lib/index.js",
+  "repository": "https://github.com/benjaminreid/dom.git",
+  "author": "Benjamin Reid <benjaminreid.nouveller@gmail.com>",
+  "license": "MIT"
+}
