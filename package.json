@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "babel src -d lib --extensions \".ts\" --ignore \"**/*.test.ts\" && terser lib/index.js --output lib/index.js"
+    "compress": "terser lib/index.js --output lib/index.js",
+    "compile": "babel src -d lib --extensions \".ts\" --ignore \"**/*.test.ts\"",
+    "build": "yarn run compile && yarn run compress"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
