@@ -5,5 +5,14 @@
   "main": "lib/index.js",
   "repository": "https://github.com/benjaminreid/dom.git",
   "author": "Benjamin Reid <benjaminreid.nouveller@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib --extensions \".ts\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "typescript": "^3.7.5"
+  }
 }
