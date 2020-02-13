@@ -7,7 +7,7 @@
   "author": "Benjamin Reid <benjaminreid.nouveller@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn run test && yarn run tsc && yarn run build",
+    "prepublishOnly": "yarn run test && yarn run tsc && yarn run build",
     "test": "jest",
     "compress": "terser lib/index.js --output lib/index.js",
     "compile": "babel src -d lib --extensions \".ts\" --ignore \"**/*.test.ts\"",
