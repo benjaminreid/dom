@@ -1,4 +1,6 @@
-const $ = (selector: string): Element | null =>
-  document.querySelector(selector);
+const $ = (
+  selector: string,
+  parent: Document | Element = document
+): Element | null => parent.querySelector(selector);
 
 export { $ };
