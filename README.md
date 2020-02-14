@@ -1,4 +1,4 @@
-# dom [![Build Status](https://travis-ci.org/benjaminreid/dom.svg?branch=master)](https://travis-ci.org/benjaminreid/dom)
+# dom [![Build Status](https://travis-ci.org/benjaminreid/dom.svg?branch=master)](https://travis-ci.org/benjaminreid/dom) ![File Size](https://img.badgesize.io/benjaminreid/dom/master/src/index.ts?compression=gzip)
 
 `dom` aims to be a small and simple module to interact with the DOM. It has a
 tiny footprint and comes with support for TypeScript. It won’t brew you a coffee
