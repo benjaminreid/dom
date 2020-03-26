@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
-import { $, $$ } from "./index";
+import { getByText, getByTestId } from "@testing-library/dom";
+import { $, $$, insertAfter } from "./index";
 
 describe("$", () => {
   afterEach(() => {
@@ -56,5 +57,30 @@ describe("$$", () => {
 
   it("should return an empty array if no nodes are found", () => {
     expect($$(".empty")).toEqual([]);
+  });
+});
+
+describe("insertAfter", () => {
+  beforeEach(() => {
+    document.body.innerHTML = `
+      <p>Item 1</p>
+    `;
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = "";
+  });
+
+  it("should insert an element after the given element", () => {
+    const $element = document.createElement("p");
+    $element.innerHTML = "Item 2";
+
+    insertAfter($element, document.querySelector("p"));
+
+    const firstChild = getByText(document.body, "Item 1");
+    const secondChild = getByText(document.body, "Item 2");
+
+    expect($$("p")[0]).toEqual(firstChild);
+    expect($$("p")[1]).toBe(secondChild);
   });
 });

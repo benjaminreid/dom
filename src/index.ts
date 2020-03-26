@@ -8,4 +8,10 @@ const $$ = (
   parent: Document | Element = document
 ): Element[] => Array.from(parent.querySelectorAll(selector));
 
-export { $, $$ };
+const insertAfter = (element: Element, referenceNode: Element | null): void => {
+  if (referenceNode && referenceNode.parentNode) {
+    referenceNode.parentNode.insertBefore(element, referenceNode.nextSibling);
+  }
+};
+
+export { $, $$, insertAfter };
