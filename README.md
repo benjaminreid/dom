@@ -19,7 +19,7 @@ npm install @benjaminreid/dom
 ## Usage
 
 ```js
-import { $, $$ } from "@benjaminreid/dom";
+import { $, $$, insertAfter } from "@benjaminreid/dom";
 
 // a wrapper around document.querySelector
 const $element = $("#button");
@@ -33,6 +33,9 @@ $elements.map($element => $element.innerText);
 // $ and $$ take a second argument so you can select an element withing another
 const $parent = $("#parent");
 const $children = $$(".children", $parent);
+
+// insertAfter allows you to insert a DOM element after another
+insertAfter($element, $(".after-this"));
 ```
 
 ## Tests
